@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_stroke"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:text="이름"
+                    android:fontFamily="@font/notosans_bold"
+                    android:id="@+id/stockName"
+                    android:layout_width="230dp"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="-10dp"
+                        android:paddingRight="15dp"
+                        android:text="현재가"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/notosans_bold"
+                        android:id="@+id/stockPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center_vertical" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="전일비"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/notosans"
+                            android:id="@+id/stockPrevPrice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_marginRight="5dp"
+                            android:gravity="right|center_vertical"/>
+                        <TextView
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginBottom="5dp"
+                            android:paddingRight="5dp"
+                            android:text="등락률"
+                            android:textSize="10dp"
+                            android:fontFamily="@font/notosans"
+                            android:id="@+id/stockPrevPercent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_marginRight="5dp"
+                            android:gravity="right|center_vertical"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

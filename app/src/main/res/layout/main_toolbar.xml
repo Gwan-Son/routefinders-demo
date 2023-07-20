@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:background="@color/arirang_red">
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/arirang_white"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="홈"
+        android:textSize="23sp"
+        android:fontFamily="@font/notosans_bold"
+        android:layout_gravity="center|center_vertical"
+        android:gravity="center"
+        android:textColor="@color/white"/>
+    <ImageView
+        android:id="@+id/openMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_menu_24"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="15dp"/>
+</androidx.appcompat.widget.Toolbar>

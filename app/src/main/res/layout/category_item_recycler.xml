@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="vertical"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_stroke"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:text="이름"
+                    android:autoSizeMaxTextSize="30dp"
+                    android:autoSizeMinTextSize="20dp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/notosans_bold"
+                    android:id="@+id/categoryName"
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:textColor="#000000"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginBottom="-20dp"
+                        android:paddingRight="15dp"
+                        android:text="현재가"
+                        android:textSize="15dp"
+                        android:fontFamily="@font/notosans_bold"
+                        android:id="@+id/categoryPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|center_vertical" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:text="전일비"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/notosans"
+                            android:id="@+id/categoryPrevPrice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:layout_marginRight="10dp"
+                            android:gravity="right|center_vertical"/>
+                        <TextView
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:paddingRight="15dp"
+                            android:text="등락률"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/notosans"
+                            android:id="@+id/categoryPrevPercent"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="right|center_vertical"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="230dp"
+    android:padding="30dp"
+    android:orientation="vertical"
+    android:background="#c9c9c9">
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:id="@+id/header_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/arirang"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/email_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:fontFamily="@font/notosans"
+        android:textColor="#000000"
+        android:text="사용자"/>
+</LinearLayout>

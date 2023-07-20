@@ -1,0 +1,44 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.129" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/drawable/login_btn.xml" value="0.367" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/drawable/login_stroke.xml" value="0.366" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/drawable/rectangle_bgwhite_corner_radius_all.xml" value="0.1275" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/font-v26/rebecca.xml" value="0.2361111111111111" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/font/font_kenia.xml" value="0.3953125" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/font/font_noto.xml" value="0.3953125" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/font/font_noto_bold.xml" value="0.3953125" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/font/font_rebecca.xml" value="0.3953125" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/font/rebecca.xml" value="0.3963541666666667" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/activity_category.xml" value="0.3120471014492754" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/activity_login.xml" value="0.3120471014492754" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/activity_news.xml" value="0.3120471014492754" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/activity_splash.xml" value="0.3120471014492754" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/activity_stock.xml" value="0.2671875" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/category.xml" value="0.1" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/category_item_recycler.xml" value="0.67" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/category_main.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/category_toolbar.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/dialog_loading.xml" value="0.33" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/main.xml" value="0.10555555555555556" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/main_drawer_header.xml" value="0.3120471014492754" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/main_toolbar.xml" value="0.3120471014492754" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/news.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/news_toolbar.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/stock_item_recycler.xml" value="0.67" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/layout/stock_web.xml" value="0.3651041666666667" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/menu/main_drawer_header.xml" value="0.1" />
+        <entry key="..\:/Users/GwanSon/AndroidStudioProjects/Project_S/app/src/main/res/menu/main_drawer_navigation.xml" value="0.36614583333333334" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

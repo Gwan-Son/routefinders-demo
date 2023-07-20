@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id = "@+id/item1"
+        android:icon = "@drawable/ic_baseline_home_24"
+        android:title = "홈"
+        android:textSize="20sp"
+        android:fontFamily="@font/notosans"
+        />
+    <item android:id = "@+id/item2"
+        android:icon = "@drawable/ic_baseline_show_chart_24"
+        android:title = "종목별 보기"
+        android:textSize="20sp"
+        android:fontFamily="@font/notosans"
+        />
+    <item android:id = "@+id/item3"
+        android:icon = "@drawable/ic_news_24"
+        android:title = "뉴스"
+        android:textSize="20sp"
+        android:fontFamily="@font/notosans"
+        />
+    <item android:id = "@+id/item4"
+        android:icon = "@drawable/ic_baseline_help_24"
+        android:title = "도움말"
+        android:textSize="20sp"
+        android:fontFamily="@font/notosans"
+        />
+</menu>

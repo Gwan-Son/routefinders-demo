@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Project_S" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/arirang_blue</item>
+        <item name="colorSecondaryVariant">@color/arirang_blue</item>
+        <item name="colorOnSecondary">@color/arirang_blue</item>
+        <!-- Customize your theme here. -->
+        <!-- 타이틀바 없애기 -->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <!-- 상태바 색상-->
+        <item name="android:statusBarColor">#b1b1b1</item>
+    </style>
+</resources>

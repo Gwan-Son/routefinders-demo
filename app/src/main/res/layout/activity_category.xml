@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/category_toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <SearchView
+                android:id="@+id/search_category"
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:layout_height="wrap_content"
+                android:iconifiedByDefault="false"
+                android:queryHint="검색어를 입력하시오"/>
+            <ImageView
+                android:id="@+id/cate_mic"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/ic_baseline_mic_24"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cate_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/category_item_recycler"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+            <View
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="#BFc9c9c9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_stroke"/>
+            <android.widget.Button
+                android:id="@+id/stockBtn"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="종목별 검색"
+                android:autoSizeMaxTextSize="30dp"
+                android:autoSizeMinTextSize="10dp"
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/white"
+                android:fontFamily="@font/notosans_bold"
+                android:background="@drawable/login_btn"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="원하는 종목을 선택하여 "
+                    android:autoSizeMaxTextSize="15dp"
+                    android:autoSizeMinTextSize="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/notosans"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="현재 시세"
+                    android:autoSizeMaxTextSize="15dp"
+                    android:autoSizeMinTextSize="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/notosans"
+                    android:textColor="@color/arirang_blue"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="를 검색해보세요"
+                    android:autoSizeMaxTextSize="15dp"
+                    android:autoSizeMinTextSize="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/notosans"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
