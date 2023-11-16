@@ -77,6 +77,7 @@ class TopRecyclerItemAdapter(private val items: ArrayList<Information>) : Recycl
         }
 
     }
+
     private fun showPurchaseDialog(context: Context,stockName: String,stockPrice: String){
         val purchaseDialog = PurchaseDialog(context,stockName,stockPrice)
         purchaseDialog.show()
