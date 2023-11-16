@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/invisible">
+
+        <io.github.florent37.shapeofview.shapes.RoundRectView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:shape_roundRect_bottomLeftRadius="10dp"
+            app:shape_roundRect_bottomRightRadius="10dp"
+            app:shape_roundRect_topLeftRadius="10dp"
+            app:shape_roundRect_topRightRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/arirang_red">
+
+                    <ImageView
+                        android:id="@+id/backButton"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:contentDescription="뒤로가기 버튼입니다."
+                        android:focusable="true"
+                        android:src="@drawable/back_button"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|center_vertical"
+                        android:contentDescription="결제창입니다."
+                        android:focusable="true"
+                        android:fontFamily="@font/notosans_bold"
+                        android:gravity="center"
+                        android:text="결제"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <ImageView
+                        android:id="@+id/closeButton"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="15dp"
+                        android:contentDescription="닫기 버튼입니다."
+                        android:focusable="true"
+                        android:src="@drawable/close_button"
+                        app:tint="@color/white" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="80dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/check_in_circle" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="결제가 완료되었습니다."
+                        android:focusable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:focusable="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/notosans_bold"
+                            android:gravity="center_horizontal"
+                            android:text="결제가"
+                            android:textColor="@color/black"
+                            android:textSize="32sp" />
+
+                        <TextView
+                            android:focusable="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-40dp"
+                            android:fontFamily="@font/notosans_bold"
+                            android:gravity="center_horizontal"
+                            android:text="완료되었습니다"
+                            android:textColor="@color/black"
+                            android:textSize="32sp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="이용해주셔서 감사합니다."
+                        android:focusable="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:focusable="false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/notosans_bold"
+                            android:gravity="center_horizontal"
+                            android:text="이용해주셔서 감사합니다"
+                            android:textColor="@color/grey"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+                    <android.widget.Button
+                        android:id="@+id/confirmButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:autoSizeMaxTextSize="24dp"
+                        android:autoSizeMinTextSize="18dp"
+                        android:autoSizeTextType="uniform"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/notosans_bold"
+                        android:text="확인"
+                        android:contentDescription="확인 버튼입니다."
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </io.github.florent37.shapeofview.shapes.RoundRectView>
+
+
+</LinearLayout>

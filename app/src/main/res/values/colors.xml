@@ -7,6 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grey">#FFCCCCCC</color>
     <color name="arirang_red">#ff7b7b</color>
     <color name="arirang_blue">#718ef4</color>
+    <color name="invisible">#656565</color>
+    <color name="amountPicker">#F0F0F0</color>
 </resources>

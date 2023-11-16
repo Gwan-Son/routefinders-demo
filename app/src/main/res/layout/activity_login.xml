@@ -50,6 +50,7 @@
             android:background="@drawable/login_stroke"
             android:fontFamily="@font/notosans"
             android:hint="이메일"
+            android:text="test@test.com"
             android:inputType="textEmailAddress"
             android:paddingLeft="12dp"
             android:textColorHint="#c9c9c9" />
@@ -69,6 +70,7 @@
             android:background="@drawable/login_stroke"
             android:fontFamily="@font/notosans"
             android:hint="비밀번호"
+            android:text="test1234"
             android:inputType="textPassword"
             android:paddingLeft="12dp"
             android:textColorHint="#c9c9c9" />

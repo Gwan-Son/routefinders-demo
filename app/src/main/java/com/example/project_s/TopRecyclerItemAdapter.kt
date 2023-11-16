@@ -1,6 +1,7 @@
 package com.example.project_s
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.util.Log
@@ -13,10 +14,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.project_s.databinding.ActivityMainBinding
 
 
 class TopRecyclerItemAdapter(private val items: ArrayList<Information>) : RecyclerView.Adapter<TopRecyclerItemAdapter.ViewHolder>(){
-
     override fun getItemCount(): Int = items.size
     var filteredStock = ArrayList<Information>()
     class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
@@ -70,5 +71,14 @@ class TopRecyclerItemAdapter(private val items: ArrayList<Information>) : Recycl
             mobileIntent.putExtra("mobileUrl",item.itemCode)
             startActivity(holder.itemView.context,mobileIntent,null)
         }
+        holder.itemView.setOnLongClickListener{
+            showPurchaseDialog(holder.itemView.context,item.name,item.price)
+            true
+        }
+
+    }
+    private fun showPurchaseDialog(context: Context,stockName: String,stockPrice: String){
+        val purchaseDialog = PurchaseDialog(context,stockName,stockPrice)
+        purchaseDialog.show()
     }
 }
