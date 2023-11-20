@@ -3,13 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:background="@drawable/rectangle_bgwhite_corner_radius_all"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:contentDescription="서버와 통신 중입니다.">
 
     <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
         style="?android:attr/progressBarStyleSmall"
         app:layout_constraintBottom_toBottomOf="parent" android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp" android:layout_marginBottom="20dp" android:id="@+id/progressBar2"/>
+        android:layout_marginStart="20dp" android:layout_marginBottom="20dp" android:id="@+id/progressBar2"
+        android:focusable="false"/>
     <TextView
         android:text="서버와 통신 중..."
         android:layout_width="wrap_content"
@@ -21,6 +24,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/progressBar2"
         app:layout_constraintStart_toEndOf="@+id/progressBar2" android:layout_marginStart="20dp"
         app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="20dp"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:focusable="false"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,105 +16,109 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <LinearLayout
+                android:id="@+id/kospiClick"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:contentDescription="코스피의 현재지수입니다. 자세한 내용은 터치를 해주세요.">
+                <TextView
+                    android:id="@+id/kospiName"
+                    android:text="코스피"
+                    android:autoSizeMaxTextSize="30dp"
+                    android:autoSizeMinTextSize="20dp"
+                    android:autoSizeTextType="uniform"
+                    android:paddingLeft="15dp"
+                    android:fontFamily="@font/notosans"
+                    android:gravity="left|center_vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/kospiName"
-                        android:text="코스피"
-                        android:autoSizeMaxTextSize="30dp"
-                        android:autoSizeMinTextSize="20dp"
-                        android:autoSizeTextType="uniform"
-                        android:paddingLeft="15dp"
-                        android:fontFamily="@font/notosans"
-                        android:gravity="left|center_vertical"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black"/>
-                    <TextView
-                        android:id="@+id/kosdaqName"
-                        android:text="코스닥"
-                        android:autoSizeMaxTextSize="30dp"
-                        android:autoSizeMinTextSize="20dp"
-                        android:autoSizeTextType="uniform"
-                        android:paddingLeft="15dp"
-                        android:fontFamily="@font/notosans"
-                        android:gravity="left|center_vertical"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black" />
-                </LinearLayout>
-                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:focusable="false"/>
+                <TextView
+                    android:contentDescription="코스피의 현재지수입니다. 자세한 내용은 터치를 해주세요."
+                    android:id="@+id/kospiNow"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/kospiNow"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/notosans_bold"
-                        android:gravity="left|center_vertical"
-                        android:paddingLeft="15dp"
-                        android:text="현재 지수"
-                        android:textColor="@color/black"
-                        android:autoSizeMaxTextSize="22dp"
-                        android:autoSizeMinTextSize="20dp"
-                        android:autoSizeTextType="uniform" />
-                    <TextView
-                        android:id="@+id/kosdaqNow"
-                        android:text="현재 지수"
-                        android:autoSizeMaxTextSize="22dp"
-                        android:autoSizeMinTextSize="20dp"
-                        android:autoSizeTextType="uniform"
-                        android:paddingLeft="15dp"
-                        android:fontFamily="@font/notosans_bold"
-                        android:gravity="left|center_vertical"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"/>
-                </LinearLayout>
-                <LinearLayout
+                    android:fontFamily="@font/notosans_bold"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="현재 지수"
+                    android:textColor="@color/black"
+                    android:autoSizeMaxTextSize="22dp"
+                    android:autoSizeMinTextSize="20dp"
+                    android:autoSizeTextType="uniform"
+                    android:focusable="false"/>
+                <TextView
+                    android:id="@+id/kospiChange"
+                    android:text="등락률"
+                    android:autoSizeMaxTextSize="15dp"
+                    android:autoSizeMinTextSize="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:paddingLeft="15dp"
+                    android:fontFamily="@font/notosans"
+                    android:gravity="left|center_vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:id="@+id/kospiChange"
-                        android:text="등락률"
-                        android:autoSizeMaxTextSize="15dp"
-                        android:autoSizeMinTextSize="10dp"
-                        android:autoSizeTextType="uniform"
-                        android:paddingLeft="15dp"
-                        android:fontFamily="@font/notosans"
-                        android:gravity="left|center_vertical"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black"/>
-                    <TextView
-                        android:paddingLeft="15dp"
-                        android:id="@+id/kosdaqChange"
-                        android:text="등락률"
-                        android:autoSizeMaxTextSize="15dp"
-                        android:autoSizeMinTextSize="10dp"
-                        android:autoSizeTextType="uniform"
-                        android:fontFamily="@font/notosans"
-                        android:gravity="left|center_vertical"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black"/>
-                </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:focusable="false"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/kosdaqClick"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:contentDescription="코스닥의 현재지수입니다. 자세한 내용은 터치를 해주세요.">
+                <TextView
+                    android:id="@+id/kosdaqName"
+                    android:text="코스닥"
+                    android:autoSizeMaxTextSize="30dp"
+                    android:autoSizeMinTextSize="20dp"
+                    android:autoSizeTextType="uniform"
+                    android:paddingLeft="15dp"
+                    android:fontFamily="@font/notosans"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:focusable="false"/>
+                <TextView
+                    android:contentDescription="코스닥의 현재지수입니다. 자세한 내용은 터치를 해주세요."
+                    android:id="@+id/kosdaqNow"
+                    android:text="현재 지수"
+                    android:autoSizeMaxTextSize="22dp"
+                    android:autoSizeMinTextSize="20dp"
+                    android:autoSizeTextType="uniform"
+                    android:paddingLeft="15dp"
+                    android:fontFamily="@font/notosans_bold"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:focusable="false"/>
+                <TextView
+                    android:paddingLeft="15dp"
+                    android:id="@+id/kosdaqChange"
+                    android:text="등락률"
+                    android:autoSizeMaxTextSize="15dp"
+                    android:autoSizeMinTextSize="10dp"
+                    android:autoSizeTextType="uniform"
+                    android:fontFamily="@font/notosans"
+                    android:gravity="left|center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:focusable="false"/>
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
@@ -129,6 +133,7 @@
                 android:layout_height="1dp"/>
             <ImageView
                 android:id="@+id/helpImg"
+                android:contentDescription="도움말"
                 android:layout_marginTop="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -168,6 +173,7 @@
                     android:layout_weight="1"
                     android:layout_marginLeft="5dp"
                     android:id="@+id/helpImg2"
+                    android:contentDescription="도움말"
                     android:layout_marginTop="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -1,6 +1,7 @@
 package com.example.project_s
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -89,8 +90,16 @@ class ModeTopRecyclerItemAdapter(private val items: ArrayList<Information>) : Re
             var TopText = "" + holder.stockName.text + "의 현재가는 " + holder.stockPrice.text + "입니다. 전일가 대비 " +  holder.stockPrevPrice.text + "이 차이가 나며, " +holder.stockPrevPercent.text +"가 바뀌었습니다."
             ttsSpeak(TopText)
         }
+        holder.itemView.setOnLongClickListener {
+            showPurchaseDialog(holder.itemView.context,item.name,item.price)
+            true
+        }
     }
     fun ttsSpeak(strTTS:String){
         tts?.speak(strTTS,TextToSpeech.QUEUE_FLUSH,null,null)
+    }
+    private fun showPurchaseDialog(context: Context, stockName: String, stockPrice: String){
+        val purchaseDialog = ModePurchaseDialog(context,stockName,stockPrice)
+        purchaseDialog.show()
     }
 }

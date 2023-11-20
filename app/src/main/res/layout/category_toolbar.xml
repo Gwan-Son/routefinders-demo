@@ -8,6 +8,7 @@
     android:minHeight="?attr/actionBarSize"
     android:background="@color/arirang_red">
     <ImageView
+        android:focusable="false"
         android:layout_width="38dp"
         android:layout_height="38dp"
         android:src="@drawable/arirang_white"/>
@@ -21,6 +22,7 @@
         android:gravity="center"
         android:textColor="@color/white"/>
     <ImageView
+        android:contentDescription="메뉴 버튼입니다."
         android:id="@+id/openMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -118,12 +118,12 @@ class ModeMainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSel
             helpDialog.setCancelable(false)
             helpDialog.show()
         }
-        kospiNow.setOnClickListener {
-            var kospiText = "현재 코스피 지수는 " + kospiNow.text + " 입니다."
+        findViewById<LinearLayout>(R.id.kospiClick).setOnClickListener{
+            var kospiText = "현재 코스피 지수는 " + kospiNow.text + " 입니다. 전일대비 " + kospiChange.text + "변했습니다."
             ttsSpeak(kospiText)
         }
-        kosdaqNow.setOnClickListener {
-            var kodaqText = "현재 코스닥 지수는 " + kosdaqNow.text + " 입니다."
+        findViewById<LinearLayout>(R.id.kosdaqClick).setOnClickListener {
+            var kodaqText = "현재 코스닥 지수는 " + kosdaqNow.text + " 입니다. 전일대비 " + kosdaqChange.text + "변했습니다."
             ttsSpeak(kodaqText)
         }
         kosTask("https://finance.naver.com/sise/")
