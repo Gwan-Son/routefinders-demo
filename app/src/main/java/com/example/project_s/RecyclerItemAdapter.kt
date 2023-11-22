@@ -1,6 +1,7 @@
 package com.example.project_s
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.util.Log
@@ -74,6 +75,10 @@ class RecyclerUserAdapter(private val items: ArrayList<Information>) : RecyclerV
                     mobileIntent.putExtra("mobileUrl",item.itemCode)
                     startActivity(holder.itemView.context,mobileIntent,null)
                 }
+                holder.itemView.setOnLongClickListener {
+                    showPurchaseDialog(holder.itemView.context,item.name,item.price)
+                    true
+                }
             }else{
                 holder.stockName.text = ""
                 holder.stockPrice.text = ""
@@ -87,6 +92,12 @@ class RecyclerUserAdapter(private val items: ArrayList<Information>) : RecyclerV
             holder.stockPrevPrice.text = ""
         }
     }
+
+    private fun showPurchaseDialog(context: Context, stockName: String, stockPrice: String){
+        val purchaseDialog = PurchaseDialog(context,stockName,stockPrice)
+        purchaseDialog.show()
+    }
+
     override fun getFilter(): Filter {
         return itemFilterStock
     }

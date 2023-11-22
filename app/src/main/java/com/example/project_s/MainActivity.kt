@@ -107,13 +107,13 @@ import org.jsoup.select.Elements
              var helpDialog = AlertDialog.Builder(this@MainActivity)
              helpDialog.setTitle("환영합니다!")
              helpDialog.setMessage(
-                 "아리랑에 오신 것을 환영합니다.\n" +
-                         "아리랑은 현재 코스피/코스닥 지수와\n" +
+                 "루트파인더즈에 오신 것을 환영합니다.\n" +
+                         "루트파인더즈는 현재 코스피/코스닥 지수와\n" +
                          "다양한 종목들의 주식의 현황을\n" +
                          "간편하게 볼 수 있는 어플리케이션입니다.\n" +
                          "자세한 사항은 도움말을 이용해주세요."
              )
-             helpDialog.setIcon(R.drawable.arirang)
+             helpDialog.setIcon(R.drawable.routefinders)
              helpDialog.setPositiveButton("확인",null)
              helpDialog.setCancelable(false)
              helpDialog.show()

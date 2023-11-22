@@ -22,6 +22,7 @@
                 android:iconifiedByDefault="false"
                 android:queryHint="검색어를 입력하시오"/>
             <ImageView
+                android:contentDescription="음성인식 버튼입니다."
                 android:id="@+id/stock_mic"
                 android:layout_width="0dp"
                 android:layout_weight="1"

@@ -13,7 +13,7 @@
         android:id="@+id/header_icon"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/arirang"/>
+        android:src="@drawable/routefinders"/>
 
     <TextView
         android:layout_marginTop="20dp"

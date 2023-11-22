@@ -15,14 +15,17 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/cate_item_linearlayout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_stroke"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:focusable="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:focusable="false">
                 <TextView
                     android:paddingLeft="15dp"
                     android:text="이름"
@@ -34,11 +37,13 @@
                     android:layout_width="250dp"
                     android:layout_height="match_parent"
                     android:gravity="left|center_vertical"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:focusable="false"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:focusable="false">
                     <TextView
                         android:layout_marginTop="-5dp"
                         android:layout_marginBottom="-20dp"
@@ -49,11 +54,13 @@
                         android:id="@+id/categoryPrice"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="right|center_vertical" />
+                        android:gravity="right|center_vertical"
+                        android:focusable="false"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:focusable="false">
                         <TextView
                             android:layout_marginBottom="5dp"
                             android:text="전일비"
@@ -64,7 +71,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1.5"
                             android:layout_marginRight="10dp"
-                            android:gravity="right|center_vertical"/>
+                            android:gravity="right|center_vertical"
+                            android:focusable="false"/>
                         <TextView
                             android:layout_marginBottom="5dp"
                             android:layout_marginRight="5dp"
@@ -76,7 +84,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1.5"
-                            android:gravity="right|center_vertical"/>
+                            android:gravity="right|center_vertical"
+                            android:focusable="false"/>
                     </LinearLayout>
                 </LinearLayout>
 

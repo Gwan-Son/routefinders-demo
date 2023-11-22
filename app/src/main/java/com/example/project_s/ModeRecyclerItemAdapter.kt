@@ -1,6 +1,7 @@
 package com.example.project_s
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Build
@@ -11,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
@@ -30,11 +32,13 @@ class ModeRecyclerItemAdapter(private val items: ArrayList<Information>) : Recyc
         var stockPrice : TextView
         var stockPrevPrice : TextView
         var stockPrevPercent : TextView
+        lateinit var stockItemLinearLayout : LinearLayout
         init {
             stockName = v.findViewById(R.id.stockName)
             stockPrice = v.findViewById(R.id.stockPrice)
             stockPrevPrice = v.findViewById(R.id.stockPrevPrice)
             stockPrevPercent = v.findViewById(R.id.stockPrevPercent)
+            stockItemLinearLayout = v.findViewById(R.id.stock_item_linearlayout)
         }
     }
     init {
@@ -64,6 +68,7 @@ class ModeRecyclerItemAdapter(private val items: ArrayList<Information>) : Recyc
             if(position < filteredStock.size){
                 val item = filteredStock[position]
                 holder.stockName.text = item.name
+                holder.stockItemLinearLayout.contentDescription = item.name
                 if(item.prevPercent[0] == '+'){
                     holder.stockPrice.text = item.price
                     holder.stockPrevPrice.text = "▲    " + item.prevPrice
@@ -89,8 +94,12 @@ class ModeRecyclerItemAdapter(private val items: ArrayList<Information>) : Recyc
                     holder.stockPrevPercent.setTextColor(Color.BLACK)
                 }
                 holder.itemView.setOnClickListener {
-                    var TopText = "" + holder.stockName.text + "의 현재가는 " + holder.stockPrice.text + "입니다. 전일가 대비 " +  holder.stockPrevPrice.text + "이 차이가 나며, " +holder.stockPrevPercent.text +"가 바뀌었습니다."
+                    var TopText = "" + holder.stockName.text + "의 현재가는 " + holder.stockPrice.text + "원 입니다. 전일가 대비 " +  holder.stockPrevPrice.text.substring(1) + "이 차이가 나며, " +holder.stockPrevPercent.text +"가 바뀌었습니다."
                     ttsSpeak(TopText)
+                }
+                holder.itemView.setOnLongClickListener {
+                    showPurchaseDialog(holder.itemView.context,item.name,item.price)
+                    true
                 }
             }else{
                 holder.stockName.text = ""
@@ -140,5 +149,9 @@ class ModeRecyclerItemAdapter(private val items: ArrayList<Information>) : Recyc
     }
     fun ttsSpeak(strTTS:String){
         tts?.speak(strTTS,TextToSpeech.QUEUE_FLUSH,null,null)
+    }
+    private fun showPurchaseDialog(context: Context, stockName: String, stockPrice: String){
+        val purchaseDialog = ModePurchaseDialog(context,stockName,stockPrice)
+        purchaseDialog.show()
     }
 }

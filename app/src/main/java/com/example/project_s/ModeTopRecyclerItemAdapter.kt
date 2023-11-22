@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
@@ -29,11 +30,13 @@ class ModeTopRecyclerItemAdapter(private val items: ArrayList<Information>) : Re
         var stockPrice : TextView
         var stockPrevPrice : TextView
         var stockPrevPercent : TextView
+        lateinit var stockItemLinearLayout : LinearLayout
         init {
             stockName = v.findViewById(R.id.stockName)
             stockPrice = v.findViewById(R.id.stockPrice)
             stockPrevPrice = v.findViewById(R.id.stockPrevPrice)
             stockPrevPercent = v.findViewById(R.id.stockPrevPercent)
+            stockItemLinearLayout = v.findViewById(R.id.stock_item_linearlayout)
         }
     }
     init {
@@ -61,6 +64,7 @@ class ModeTopRecyclerItemAdapter(private val items: ArrayList<Information>) : Re
     override fun onBindViewHolder(holder: ModeTopRecyclerItemAdapter.ViewHolder, position: Int) {
         val item = items[position]
         holder.stockName.text = item.name
+        holder.stockItemLinearLayout.contentDescription = item.name
         if(item.prevPercent[0] == '+'){
             holder.stockPrice.text = item.price
             holder.stockPrevPrice.text = "▲    " + item.prevPrice

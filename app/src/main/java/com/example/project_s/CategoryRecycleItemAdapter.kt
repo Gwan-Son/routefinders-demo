@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -24,11 +25,13 @@ class CategoryRecycleItemAdapter(private val items: ArrayList<Information>) : Re
         var stockPrice : TextView
         var stockPrevPrice : TextView
         var stockPrevPercent : TextView
+        lateinit var cateItemLinearLayout: LinearLayout
         init {
             stockName = v.findViewById(R.id.categoryName)
             stockPrice = v.findViewById(R.id.categoryPrice)
             stockPrevPrice = v.findViewById(R.id.categoryPrevPrice)
             stockPrevPercent = v.findViewById(R.id.categoryPrevPercent)
+            cateItemLinearLayout = v.findViewById(R.id.cate_item_linearlayout)
         }
     }
     init{
@@ -43,6 +46,7 @@ class CategoryRecycleItemAdapter(private val items: ArrayList<Information>) : Re
             if(position < filteredCategory.size){
                 val cateItem = filteredCategory[position]
                 holder.stockName.text = cateItem.name
+                holder.cateItemLinearLayout.contentDescription = cateItem.name + "종목은 " + cateItem.prevPercent + "가 바뀌었습니다."
                 if(cateItem.prevPercent[0] == '+'){
                     holder.stockPrevPercent.text = ""
                     holder.stockPrevPrice.text = ""

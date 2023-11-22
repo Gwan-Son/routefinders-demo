@@ -35,18 +35,18 @@ import kotlin.collections.ArrayList
 
 class ModeMainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     lateinit var toolbar : Toolbar
-    lateinit var drawerLayout: DrawerLayout
-    lateinit var navView : NavigationView
-    lateinit var kospiNow:TextView
-    lateinit var kospiChange:TextView
-    lateinit var kosdaqNow:TextView
-    lateinit var kosdaqChange:TextView
-    lateinit var headerView:View
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var navView : NavigationView
+    private lateinit var kospiNow:TextView
+    private lateinit var kospiChange:TextView
+    private lateinit var kosdaqNow:TextView
+    private lateinit var kosdaqChange:TextView
+    private lateinit var headerView:View
     lateinit var text :TextView
     lateinit var menu:ImageView
-    lateinit var helpImg:ImageView
-    lateinit var helpImg2:ImageView
-    lateinit var mainRecyclerView: RecyclerView
+    private lateinit var helpImg:ImageView
+    private lateinit var helpImg2:ImageView
+    private lateinit var mainRecyclerView: RecyclerView
     private lateinit var auth : FirebaseAuth
     private var tts:TextToSpeech? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,23 +107,27 @@ class ModeMainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSel
             var helpDialog = AlertDialog.Builder(this@ModeMainActivity)
             helpDialog.setTitle("(시각)환영합니다!")
             helpDialog.setMessage(
-                "아리랑에 오신 것을 환영합니다.\n" +
-                        "아리랑은 현재 코스피/코스닥 지수와\n" +
+                "루트파인더즈에 오신 것을 환영합니다.\n" +
+                        "루트파인더즈는 현재 코스피/코스닥 지수와\n" +
                         "다양한 종목들의 주식의 현황을\n" +
                         "간편하게 볼 수 있는 어플리케이션입니다.\n" +
                         "자세한 사항은 도움말을 이용해주세요."
             )
-            helpDialog.setIcon(R.drawable.arirang)
-            helpDialog.setPositiveButton("확인",DialogInterface.OnClickListener { dialogInterface, i -> ttsSpeak("아리랑에 오신 것을 환영합니다. 아리랑은 현재 코스피/코스닥 지수와 다양한 종목들의 주식의 현황을 간편하게 볼 수 있는 어플리케이션입니다. 자세한 사항은 도움말을 이용해주세요.") })
+            helpDialog.setIcon(R.drawable.routefinders)
+            helpDialog.setPositiveButton("확인",DialogInterface.OnClickListener { dialogInterface, i -> ttsSpeak("루트파인더즈에 오신 것을 환영합니다. 루트파인더즈는 현재 코스피/코스닥 지수와 다양한 종목들의 주식의 현황을 간편하게 볼 수 있는 어플리케이션입니다. 자세한 사항은 도움말을 이용해주세요.") })
             helpDialog.setCancelable(false)
             helpDialog.show()
         }
         findViewById<LinearLayout>(R.id.kospiClick).setOnClickListener{
-            var kospiText = "현재 코스피 지수는 " + kospiNow.text + " 입니다. 전일대비 " + kospiChange.text + "변했습니다."
+            var kospiText = "현재 코스피 지수는 " + kospiNow.text + " 입니다. 전일대비 "
+            var temp = kospiChange.text.substring(1).split(" ")
+            kospiText = kospiText + temp[0] + "차이가 나며, " + temp[1] + "만큼 바뀌었습니다."
             ttsSpeak(kospiText)
         }
         findViewById<LinearLayout>(R.id.kosdaqClick).setOnClickListener {
-            var kodaqText = "현재 코스닥 지수는 " + kosdaqNow.text + " 입니다. 전일대비 " + kosdaqChange.text + "변했습니다."
+            var kodaqText = "현재 코스닥 지수는 " + kosdaqNow.text + " 입니다. 전일대비 "
+            var temp = kosdaqChange.text.substring(1).split(" ")
+            kodaqText = kodaqText + temp[0] + "차이가 나며, " + temp[1] + "만큼 바뀌었습니다."
             ttsSpeak(kodaqText)
         }
         kosTask("https://finance.naver.com/sise/")

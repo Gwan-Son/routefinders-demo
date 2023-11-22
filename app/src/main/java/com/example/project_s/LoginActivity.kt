@@ -15,7 +15,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlin.math.sign
+
 var loginMode:Boolean = true
 class LoginActivity : AppCompatActivity() {
     lateinit var emailEt: EditText
@@ -38,11 +38,11 @@ class LoginActivity : AppCompatActivity() {
         requestPermission()
         arirangImg.setOnClickListener {
             if(loginMode){
-                arirangImg.setImageResource(R.drawable.arirang_grey)
+                arirangImg.setImageResource(R.drawable.routefinders_gray)
                 loginMode = !loginMode
             }
             else{
-                arirangImg.setImageResource(R.drawable.arirang)
+                arirangImg.setImageResource(R.drawable.routefinders)
                 loginMode = !loginMode
             }
         }

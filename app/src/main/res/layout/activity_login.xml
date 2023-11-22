@@ -6,10 +6,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <ImageView
+        android:contentDescription="루트파인더즈 로고입니다."
         android:id="@+id/arirangImg"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:src="@drawable/arirang"
+        android:src="@drawable/routefinders"
         android:layout_gravity="center"
         android:layout_marginTop="203px"/>
     <LinearLayout

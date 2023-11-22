@@ -15,14 +15,18 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/stock_item_linearlayout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/login_stroke"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:contentDescription=""
+            android:focusable="true">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:focusable="false">
                 <TextView
                     android:paddingLeft="15dp"
                     android:text="이름"
@@ -31,11 +35,13 @@
                     android:layout_width="230dp"
                     android:layout_height="match_parent"
                     android:gravity="left|center_vertical"
-                    android:textColor="#000000"/>
+                    android:textColor="#000000"
+                    android:focusable="false"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:focusable="false">
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_marginBottom="-10dp"
@@ -46,11 +52,13 @@
                         android:id="@+id/stockPrice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="right|center_vertical" />
+                        android:gravity="right|center_vertical"
+                        android:focusable="false"/>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:focusable="false">
                         <TextView
                             android:layout_marginTop="-5dp"
                             android:layout_marginBottom="5dp"
@@ -62,7 +70,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
                             android:layout_marginRight="5dp"
-                            android:gravity="right|center_vertical"/>
+                            android:gravity="right|center_vertical"
+                            android:focusable="false"/>
                         <TextView
                             android:layout_marginTop="-5dp"
                             android:layout_marginBottom="5dp"
@@ -75,7 +84,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="2"
                             android:layout_marginRight="5dp"
-                            android:gravity="right|center_vertical"/>
+                            android:gravity="right|center_vertical"
+                            android:focusable="false"/>
                     </LinearLayout>
                 </LinearLayout>
 
